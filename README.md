@@ -52,7 +52,7 @@ yarn start
 
 > 👩‍💻 Rerun `yarn deploy` whenever you want to deploy new contracts to the frontend (run `yarn deploy --reset` for a completely fresh deploy if you have made no contract changes).
 
-## ⛳️ Checkpoint 1: 🔭 The Structure 📺
+## Checkpoint 1: 🔭 The Structure 📺
 
 Navigate to the `Debug Contracts` tab, you should see two smart contracts displayed called `DEX` and `Balloons`.
 
@@ -73,7 +73,7 @@ Navigate to the `Debug Contracts` tab, you should see two smart contracts displa
 
 ---
 
-## ⛳️ **Checkpoint 2: Reserves** ⚖️
+## Checkpoint 2: Reserves ⚖️
 
 We want to create an automatic market where our contract will hold reserves of both ETH and 🎈 Balloons. These reserves will provide liquidity that allows anyone to swap between the assets.
 
@@ -161,7 +161,7 @@ Now when we `yarn deploy --reset` then our contract should be initialized as soo
 
 ---
 
-## ⛳️ **Checkpoint 3: Price** 🤑
+## Checkpoint 3: Price 🤑
 
 This section is directly from the [original tutorial](https://medium.com/@austin_48503/%EF%B8%8F-minimum-viable-exchange-d84f30bd0c90) "Price" section. It outlines the general details of the DEX's pricing model.
 
@@ -237,7 +237,7 @@ Finally, let’s say the ratio is the same but we want to swap 100,000 tokens in
 
 ---
 
-## ⛳️ **Checkpoint 4: Trading** 🤝
+## Checkpoint 4: Trading 🤝
 
 Let’s edit the `DEX.sol` smart contract and add two new functions for swapping from each asset to the other, `ethToToken()` and `tokenToEth()`!
 
@@ -279,7 +279,7 @@ Let’s edit the `DEX.sol` smart contract and add two new functions for swapping
 
 ---
 
-## ⛳️ **Checkpoint 5: Liquidity** 🌊
+## Checkpoint 5: Liquidity 🌊
 
 So far, only the `init()` function controls liquidity. To make this more decentralized, it would be better if anyone could add to the liquidity pool by sending the DEX both ETH and tokens at the correct ratio.
 
@@ -340,13 +340,13 @@ Let’s create two new functions that let us deposit and withdraw liquidity. How
 
 ### 🥅 Goals / Checks
 
-- [ ] 🥅 Before using the deposit function, check the required amount of $BAL tokens, which is equal to the amount of ETH you have entered for deposit by using the price function in debug tab. Now, you can use `approve()` function with only required amount of tokens. 
+- [ ] 🥅 Before using the deposit function, check the required amount of $BAL tokens, which is equal to the amount of ETH you have entered for deposit by using the price function in debug tab. Now, you can use `approve()` function with only required amount of tokens.
 - [ ] 💧 Deposit liquidity, and then check your liquidity amount through the mapping in the debug tab. Has it changed properly? Did the right amount of assets get deposited?
 - [ ] 🧐 What happens if you `deposit()` at the beginning of the deployed contract, then another user starts swapping out for most of the balloons, and then you try to withdraw your position as a liquidity provider? Answer: you should get the amount of liquidity proportional to the ratio of assets within the isolated liquidity pool. It will not be 1:1.
 
 ---
 
-## ⛳️ **Checkpoint 6: UI** 🖼
+## Checkpoint 6: UI 🖼
 
 Cool beans! Your front-end should be showing something like this now!
 
@@ -422,7 +422,7 @@ yarn vercel
 yarn test
 ```
 
-### Configuration of Third-Party Services for Production-Grade Apps.
+#### Configuration of Third-Party Services for Production-Grade Apps.
 
 By default, 🏗 Scaffold-ETH 2 provides predefined API keys for popular services such as Alchemy and Etherscan. This allows you to begin developing and testing your applications more easily, avoiding the need to register for these services.  
 This is great to complete your **SpeedRunEthereum**.
